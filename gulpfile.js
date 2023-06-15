@@ -55,7 +55,7 @@ function TaskE(cb) {
 exports.async = series(TaskA, TaskB);//有順序的執行任務
 exports.sync = parallel(TaskA, TaskB);//一起執行任務
 
-exports.all = series(TaskA , TaskB , parallel(TaskC , TaskD) , TaskE);
+exports.all = series(TaskA, TaskB, parallel(TaskC, TaskD), TaskE);
 
 
 // css壓縮
@@ -64,10 +64,10 @@ exports.all = series(TaskA , TaskB , parallel(TaskC , TaskD) , TaskE);
 const cleanCSS = require('gulp-clean-css');
 
 //任務
-function minicss(){
-   return src('src/css/*.css')
-   .pipe(cleanCSS()) //壓縮css
-   .pipe(dest('dist/css'))
+function minicss() {
+    return src('src/css/*.css')
+        .pipe(cleanCSS()) //壓縮css
+        .pipe(dest('dist/css'))
 }
 
 //導出
@@ -78,10 +78,10 @@ exports.style = minicss
 
 const uglify = require('gulp-uglify');
 
-function minijs(){
-   return src('src/js/*.js')
-   .pipe(uglify())
-   .pipe(dest('dist/js'))
+function minijs() {
+    return src('src/js/*.js')
+        .pipe(uglify())
+        .pipe(dest('dist/js'))
 }
 
 
@@ -91,26 +91,58 @@ exports.scripts = minijs
 // ========   css整合    ==========================
 var concat = require('gulp-concat');
 
-function concatcss(){
+function concatcss() {
     return src('src/css/*.css')
-    .pipe(concat('all.css'))
-    .pipe(dest('dist/css'))
+        .pipe(concat('all.css'))
+        .pipe(dest('dist/css'))
 }
 
-exports.allcss  = concatcss;
+exports.allcss = concatcss;
 
 // ==== sass =====
 const sass = require('gulp-sass')(require('sass'));
 
 
 function sassstyle() {
-   return src('src/sass/*.scss')
-   .pipe(sass.sync().on('error', sass.logError))
-   .pipe(dest('dist/css'))
+    return src('src/sass/*.scss')
+        .pipe(sass.sync().on('error', sass.logError))
+        //.pipe(cleanCSS()) 
+        .pipe(dest('dist/css'))
 }
 
 
 exports.scss = sassstyle;
+
+
+//   html template
+
+const fileinclude = require('gulp-file-include');
+
+function html() {
+    return src('src/*.html')
+    .pipe(fileinclude({
+        prefix: '@@',
+        basepath: '@file'
+    }))
+    .pipe(dest('dist/'))
+}
+
+exports.template = html;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
