@@ -74,6 +74,25 @@ function minicss(){
 exports.style = minicss
 
 
+// js 壓縮
+
+const uglify = require('gulp-uglify');
+
+function minijs(){
+   return src('src/js/*.js')
+   .pipe(uglify())
+   .pipe(dest('dist/js'))
+}
+
+
+exports.scripts = minijs
+
+
+
+
+
+
+
 
 
 
