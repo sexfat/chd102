@@ -88,6 +88,36 @@ function minijs(){
 exports.scripts = minijs
 
 
+// ========   css整合    ==========================
+var concat = require('gulp-concat');
+
+function concatcss(){
+    return src('src/css/*.css')
+    .pipe(concat('all.css'))
+    .pipe(dest('dist/css'))
+}
+
+exports.allcss  = concatcss;
+
+// ==== sass =====
+const sass = require('gulp-sass')(require('sass'));
+
+
+function sassstyle() {
+   return src('src/sass/*.scss')
+   .pipe(sass.sync().on('error', sass.logError))
+   .pipe(dest('dist/css'))
+}
+
+
+exports.scss = sassstyle;
+
+
+
+
+
+
+
 
 
 
