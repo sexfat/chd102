@@ -58,6 +58,24 @@ exports.sync = parallel(TaskA, TaskB);//一起執行任務
 exports.all = series(TaskA , TaskB , parallel(TaskC , TaskD) , TaskE);
 
 
+// css壓縮
+
+//套件引入
+const cleanCSS = require('gulp-clean-css');
+
+//任務
+function minicss(){
+   return src('src/css/*.css')
+   .pipe(cleanCSS()) //壓縮css
+   .pipe(dest('dist/css'))
+}
+
+//導出
+exports.style = minicss
+
+
+
+
 
 
 
