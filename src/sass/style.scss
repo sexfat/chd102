@@ -1,10 +1,15 @@
+$fontSize: 14px;
+$color : #333;
+
+
 body {
-    font-size: 14px;
+    font-size: $fontSize;
     font-weight: 400;
     margin: 0;
     padding: 0;
+    color : $color;
 
-    .wrapper {
+    .container {
         width: 100%;
         header {
             max-width: 1200px;

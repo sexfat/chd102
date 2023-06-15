@@ -3,23 +3,24 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  color: #333;
 }
-body .wrapper {
+body .container {
   width: 100%;
 }
-body .wrapper header {
+body .container header {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
-body .wrapper header nav {
+body .container header nav {
   width: 100%;
 }
-body .wrapper header nav ul {
+body .container header nav ul {
   list-style: none;
   display: flex;
 }
-body .wrapper header nav ul li {
+body .container header nav ul li {
   padding: 10px 20px;
   text-align: center;
   width: 120px;
