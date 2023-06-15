@@ -143,7 +143,7 @@ function img() {
 
 function taskWatch() {
     watch('src/sass/*.scss', sassstyle)
-    watch('src/images/*.*', img)
+    watch(['src/images/*.*' , 'src/images/**/*.*'], img)
     watch('src/js/*.js' , minijs)
     watch(['src/*.html', 'src/layout/*.html'], html)
 }
