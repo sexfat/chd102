@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/sexfat/chd102/issues"
   },
-  "homepage": "https://github.com/sexfat/chd102#readme"
+  "homepage": "https://github.com/sexfat/chd102#readme",
+  "dependencies": {
+    "jquery": "^3.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  }
 }
