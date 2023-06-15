@@ -120,14 +120,36 @@ const fileinclude = require('gulp-file-include');
 
 function html() {
     return src('src/*.html')
-    .pipe(fileinclude({
-        prefix: '@@',
-        basepath: '@file'
-    }))
-    .pipe(dest('dist/'))
+        .pipe(fileinclude({
+            prefix: '@@',
+            basepath: '@file'
+        }))
+        .pipe(dest('dist/'))
 }
 
 exports.template = html;
+
+//圖片搬家
+
+function img() {
+    return src('src/images/*.*').pipe(dest('dist/images'))
+}
+
+
+
+
+//監看所有變動
+
+
+function taskWatch() {
+    watch('src/sass/*.scss', sassstyle)
+    watch('src/images/*.*', img)
+    watch('src/js/*.js' , minijs)
+    watch(['src/*.html', 'src/layout/*.html'], html)
+}
+
+
+exports.w = series(img,taskWatch)
 
 
 

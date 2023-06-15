@@ -9,12 +9,15 @@ body {
     padding: 0;
     color : $color;
 
-    .container {
+    .wrapper {
         width: 100%;
         header {
             max-width: 1200px;
             width: 100%;
             margin: 0 auto;
+            .login{
+                display: none;
+            }
             nav {
                 width: 100%;
                 ul {

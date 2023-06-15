@@ -5,22 +5,25 @@ body {
   padding: 0;
   color: #333;
 }
-body .container {
+body .wrapper {
   width: 100%;
 }
-body .container header {
+body .wrapper header {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
-body .container header nav {
+body .wrapper header .login {
+  display: none;
+}
+body .wrapper header nav {
   width: 100%;
 }
-body .container header nav ul {
+body .wrapper header nav ul {
   list-style: none;
   display: flex;
 }
-body .container header nav ul li {
+body .wrapper header nav ul li {
   padding: 10px 20px;
   text-align: center;
   width: 120px;
