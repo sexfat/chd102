@@ -11,9 +11,6 @@
 // plugin 
 // @import '../node_modules/bootstrap/scss/bootstrap';
 
-
-
-
 //組件
 @import 'component/btn';
 @import 'component/grid';
@@ -44,6 +41,30 @@
 #{$class} {
    background-color: #fff;
 }
+
+
+//運算
+
+.xxoo {
+   width: 10 + 20px;
+   height: 100px - 1px;
+   max-width: 100px * 10;
+   font:  (100 / 20) + px ; 
+}
+
+// 判斷式
+$font : thin;
+
+.if {
+  @if $font == 'bold' {
+      font-weight: 900;
+  }@else if $font == 'medium'  {
+      font-weight: 400;
+  }@else if $font == 'thin' {
+      font-weight: 100;
+  }
+}
+
 
 
 

@@ -96,7 +96,7 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 1366px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -114,6 +114,17 @@ body {
 
 .fgw {
   background-color: #fff;
+}
+
+.xxoo {
+  width: 30px;
+  height: 99px;
+  max-width: 1000px;
+  font: 5px;
+}
+
+.if {
+  font-weight: 100;
 }
 
 /*# sourceMappingURL=style.css.map */

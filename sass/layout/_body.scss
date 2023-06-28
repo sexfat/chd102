@@ -9,10 +9,14 @@ body {
  }
 
 .wrapper {
-    width: 100%;
-    max-width: 1366px;
-    margin: auto;
 
+  @if $layoutWidth == 100 {
+    width: 100%;
+  }@else {
+    width: 100%;
+    max-width: $layoutWidth;
+    margin: auto;
+  }
  }
 
 
