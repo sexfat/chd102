@@ -6,6 +6,41 @@
   height: 100px;
 }
 
+h1 {
+  font-size: 30px;
+}
+
+.a {
+  padding: 60px;
+}
+
+.img_bg {
+  background-image: url("./images/b.jpg");
+}
+
+.fgw {
+  background-color: #fff;
+}
+
+.wrapper_fixed {
+  width: 100%;
+  max-width: 1366px;
+}
+.wrapper_fixed header {
+  margin: 10px auto;
+  height: 120px;
+}
+.wrapper_fixed header nav ul {
+  list-style: none;
+  display: flex;
+}
+.wrapper_fixed header nav ul li {
+  min-width: 120px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: aliceblue;
+}
+
 body {
   margin: 10px 20px;
   color: #333;
