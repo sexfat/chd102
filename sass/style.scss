@@ -2,16 +2,39 @@
 /*css 註解*/
 
 //變數
-$fontSize : 20px;
+$fontSize : 20px; //數值
+$fontFamily : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;//字串
+
+$color : #333; //color 
+$margin : 10px 20px ; // list
+// $padding : null; // null
+
+
+
+.box_default {
+  @if $color {  // true
+    color : $color 
+  }@else {
+     color : null
+  }
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
 
 
 
 body {
-   $margin : 0px;
-   margin: $margin; //區域變數
-   padding: 0;
+   //$margin : 0px; //區域變數
+   margin: $margin; 
+   padding: null; // null 屬性被刪出
+   color : $color;
    font-size: $fontSize;
-   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: $fontFamily;
    background-color: #fee594;
 }
 
