@@ -1,102 +1,53 @@
 // sass 註解
 /*css 註解*/
+//base
+@import 'base/var';
+@import 'base/color';
+@import 'base/font';
 
-//變數
-$fontSize : 20px; //數值
-$fontFamily : 'Gill Sans',
-'Gill Sans MT',
-Calibri,
-'Trebuchet MS',
-sans-serif; //字串
+// mixin
+@import 'mixin/all';
 
-$color : #333; //color 
-$margin : 10px 20px; // list
-// $padding : null; // null
-
-.box_default {
-   @if $color {
-      // true
-      color: $color
-   }
-
-   @else {
-      color: null
-   }
-
-   width: 100px;
-   height: 100px;
-}
-
-// map 
-$map : (key : value,
-   h1 : 40px,
-   h2 : 36px,
-   h3 : 30px);
-
-h1 {
-   font-size: map-get($map, h3); // map 取值
-}
+// plugin 
+// @import '../node_modules/bootstrap/scss/bootstrap';
 
 
 
-//變數作用域
 
-$a : 60px;
-$a : 30px !default;
+//組件
+@import 'component/btn';
+@import 'component/grid';
+
+// layout
+@import 'layout/cart';
+@import 'layout/footer';
+@import 'layout/header';
+@import 'layout/login';
+@import 'layout/nav';
+@import 'layout/title';
+@import 'layout/body';
+
+// page
+@import 'page/index';
+@import 'page/about';
+
+// @import 'page/var';
 
 .a {
    padding: $a;
 }
 
-// 變數轉型 
-$file : 'images';
-
 .img_bg {
    background-image: url('./#{$file}/b.jpg');
 }
-
-$class : '.fgw';
 
 #{$class} {
    background-color: #fff;
 }
 
 
-//nesting
 
-$bg : #333;
 
-.wrapper {
-   width: 100%;
-   max-width: 1366px;
-   margin: auto;
-   header {
-      margin: 0px 10px;
-      height: 120px;
-      display: flex;
-      justify-content: space-between;
-      h1.logo {
-          width: 100px;
-          height: 100px;
-          background-color: $bg;
-      }
-   
-      nav {
-         ul {
-            list-style: none;
-            display: flex;
-   
-            li {
-               min-width: 120px;
-               padding: 10px 20px;
-               background-color: $bg;
-               color: aliceblue;
-            }
-         }
-   
-      }
-   }
-}
 
 
 

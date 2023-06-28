@@ -6,8 +6,55 @@
   height: 100px;
 }
 
+header {
+  margin: 0px 10px;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+header h1.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #333;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  min-width: 120px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: aliceblue;
+}
+header nav ul li a {
+  color: #fff;
+  transition: 0.3 all ease;
+  text-decoration: none;
+}
+header nav ul li a:hover {
+  color: #73f8dc;
+}
+header nav ul li a::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  transition: 0.3 all ease;
+}
+
 h1 {
-  font-size: 30px;
+  font-size: 36px;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1366px;
+  margin: auto;
 }
 
 .a {
@@ -20,33 +67,6 @@ h1 {
 
 .fgw {
   background-color: #fff;
-}
-
-.wrapper {
-  width: 100%;
-  max-width: 1366px;
-  margin: auto;
-}
-.wrapper header {
-  margin: 0px 10px;
-  height: 120px;
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper header h1.logo {
-  width: 100px;
-  height: 100px;
-  background-color: #333;
-}
-.wrapper header nav ul {
-  list-style: none;
-  display: flex;
-}
-.wrapper header nav ul li {
-  min-width: 120px;
-  padding: 10px 20px;
-  background-color: #333;
-  color: aliceblue;
 }
 
 body {

@@ -1,0 +1,42 @@
+//變數
+$fontSize : 20px; //數值
+$fontFamily : 'Gill Sans',
+'Gill Sans MT',
+Calibri,
+'Trebuchet MS',
+sans-serif; //字串
+
+$color : #333; //color 
+$margin : 10px 20px; // list
+// $padding : null; // null
+
+.box_default {
+   @if $color {
+      // true
+      color: $color
+   }
+
+   @else {
+      color: null
+   }
+
+   width: 100px;
+   height: 100px;
+}
+
+// map 
+$map : (key : value,
+   h1 : 40px,
+   h2 : 36px,
+   h3 : 30px);
+
+
+   //變數作用域
+
+$a : 60px;
+$a : 30px !default;
+
+$class : '.fgw';
+
+// 變數轉型 
+$file : 'images';
