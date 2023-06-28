@@ -51,6 +51,14 @@ h1 {
   font-size: 36px;
 }
 
+body {
+  margin: 10px 20px;
+  color: #333;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #ae91fe;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1366px;
@@ -67,18 +75,6 @@ h1 {
 
 .fgw {
   background-color: #fff;
-}
-
-body {
-  margin: 10px 20px;
-  color: #333;
-  font-size: 20px;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  background-color: #fee594;
-}
-
-h1 {
-  font-size: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

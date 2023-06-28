@@ -1,6 +1,16 @@
+body {
+    //$margin : 0px; //區域變數
+    margin: $margin;
+    padding: null; // null 屬性被刪出
+    color: $color;
+    font-size: $fontSize;
+    font-family: $fontFamily;
+    background-color: $bodyBgColor;
+ }
+
 .wrapper {
     width: 100%;
     max-width: 1366px;
     margin: auto;
- 
+
  }

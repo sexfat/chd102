@@ -1,10 +1,5 @@
 //變數
-$fontSize : 20px; //數值
-$fontFamily : 'Gill Sans',
-'Gill Sans MT',
-Calibri,
-'Trebuchet MS',
-sans-serif; //字串
+
 
 $color : #333; //color 
 $margin : 10px 20px; // list
@@ -40,3 +35,8 @@ $class : '.fgw';
 
 // 變數轉型 
 $file : 'images';
+
+//斷點變數
+$desktop : 1200px;
+$medium : 996px;
+$small : 576px;

@@ -60,33 +60,3 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-body {
-   //$margin : 0px; //區域變數
-   margin: $margin;
-   padding: null; // null 屬性被刪出
-   color: $color;
-   font-size: $fontSize;
-   font-family: $fontFamily;
-   background-color: #fee594;
-}
-
-h1 {
-   font-size: 40px;
-   //   margin: $margin; //取不到區域變數值
-}
