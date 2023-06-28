@@ -6,10 +6,35 @@ body {
     font-size: $fontSize;
     font-family: $fontFamily;
     background-color: $bodyBgColor;
+    h1 {
+        font-size: 50px;
+        @include t(){
+           font-size: 36px;
+           color: #f20;
+         }
+        @include m(){
+           font-size: 60px;
+           color: #19cef6
+
+        } 
+    }
  }
 
 .wrapper {
-  @include layout(100);
+  //桌機
+  @include layout(1200);
+  // 平板
+  @include t(){
+    @include layout(800);
+  }
+  
+  //手機 
+
+  @include m(){
+    @include layout(100);
+  }
+   
+
   // @if $layoutWidth == 100 {
   //   width: 100%;
   // }@else {
@@ -26,7 +51,10 @@ body {
    padding-top: 100px;
 
    section {
-      @include layout(1920);
+      @include layout(1920){
+       height: 400px
+
+      };
       background-color: #fea3a3;
    }
 

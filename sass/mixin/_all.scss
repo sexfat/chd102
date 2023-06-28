@@ -27,10 +27,35 @@
 @mixin layout($w) {
         @if $w == 100 {
             width: 100%;
+            @content;
         }
         @else {
             width: 100%;
             max-width: $w + px;
             margin: auto;
+            @content;
         }
 }
+
+//rwd mixin
+
+@mixin t(){
+    @media all and (max-width: $medium) {
+        @content;
+    }
+}
+
+@mixin m(){
+    @media all and (max-width: $small) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
