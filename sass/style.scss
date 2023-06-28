@@ -64,35 +64,40 @@ $class : '.fgw';
 
 //nesting
 
+$bg : #333;
 
-.wrapper_fixed {
+.wrapper {
    width: 100%;
    max-width: 1366px;
-
+   margin: auto;
    header {
-      margin: 10px auto;
+      margin: 0px 10px;
       height: 120px;
-
+      display: flex;
+      justify-content: space-between;
+      h1.logo {
+          width: 100px;
+          height: 100px;
+          background-color: $bg;
+      }
+   
       nav {
          ul {
             list-style: none;
             display: flex;
-
+   
             li {
                min-width: 120px;
                padding: 10px 20px;
-               background-color: #333;
+               background-color: $bg;
                color: aliceblue;
             }
          }
-
+   
       }
    }
-
-
-
-
 }
+
 
 
 
