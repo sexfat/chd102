@@ -1,0 +1,36 @@
+@mixin name() {
+    // 屬性or 組件
+}
+
+@include name();
+
+@mixin rect($w, $h:$w) {
+    width: $w;
+    height: $h;
+}
+
+.box {
+    @include rect(1000px, 200px);
+    background-color: #fff;
+}
+
+.cardbox {
+    @include rect(200px, 40px);
+    background-color: #f20;
+}
+
+
+
+// layout 
+
+// 
+@mixin layout($w) {
+        @if $w == 100 {
+            width: 100%;
+        }
+        @else {
+            width: 100%;
+            max-width: $w + px;
+            margin: auto;
+        }
+}

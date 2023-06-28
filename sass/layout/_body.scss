@@ -9,19 +9,26 @@ body {
  }
 
 .wrapper {
-
-  @if $layoutWidth == 100 {
-    width: 100%;
-  }@else {
-    width: 100%;
-    max-width: $layoutWidth;
-    margin: auto;
-  }
+  @include layout(100);
+  // @if $layoutWidth == 100 {
+  //   width: 100%;
+  // }@else {
+  //   width: 100%;
+  //   max-width: $layoutWidth;
+  //   margin: auto;
+  // }
  }
+
+
 
 
  .container {
    padding-top: 100px;
+
+   section {
+      @include layout(1920);
+      background-color: #fea3a3;
+   }
 
 
 

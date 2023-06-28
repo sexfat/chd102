@@ -6,6 +6,18 @@
   height: 100px;
 }
 
+.box {
+  width: 1000px;
+  height: 200px;
+  background-color: #fff;
+}
+
+.cardbox {
+  width: 200px;
+  height: 40px;
+  background-color: #f20;
+}
+
 .btn {
   padding: 8px 20px;
   text-align: center;
@@ -96,12 +108,16 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 1400px;
-  margin: auto;
 }
 
 .container {
   padding-top: 100px;
+}
+.container section {
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+  background-color: #fea3a3;
 }
 
 .a {
@@ -120,7 +136,6 @@ body {
   width: 30px;
   height: 99px;
   max-width: 1000px;
-  font: 5px;
 }
 
 .if {
