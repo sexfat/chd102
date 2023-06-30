@@ -171,6 +171,9 @@ function browser(done) {
 }
 
 
+exports.default = browser;
+
+
 
 
 
