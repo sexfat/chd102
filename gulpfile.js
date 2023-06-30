@@ -151,6 +151,25 @@ function taskWatch() {
 
 exports.w = series(img,taskWatch)
 
+//瀏覽器同步
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+
+function browser(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dist",
+            index: "index.html"
+        },
+        port: 3000
+    });
+    watch('src/sass/*.scss', sassstyle).on('change' , reload)
+    watch(['src/images/*.*' , 'src/images/**/*.*'], img).on('change' , reload)
+    watch('src/js/*.js' , minijs).on('change' , reload)
+    watch(['src/*.html', 'src/layout/*.html'], html).on('change' , reload)
+    done();
+}
+
 
 
 
