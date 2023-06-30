@@ -110,7 +110,7 @@ function sassstyle() {
         .pipe(autoprefixer({
             cascade: false
         }))
-        //.pipe(cleanCSS()) 
+        .pipe(cleanCSS()) 
         .pipe(dest('dist/css'))
 }
 
@@ -175,12 +175,58 @@ function browser(done) {
 }
 
 
-exports.default = browser;
+
 
 //以上開發用
 
 
 //以下打包用
+
+//壓縮圖片
+const imagemin = require('gulp-imagemin');
+
+function min_images(){
+    return src(['src/images/*.*' , 'src/images/**/*.*'])
+    .pipe(imagemin([
+        imagemin.mozjpeg({quality: 70, progressive: true}) // 壓縮品質      quality越低 -> 壓縮越大 -> 品質越差 
+    ]))
+    .pipe(dest('dist/images'))
+}
+
+//js 降轉 babel 
+const babel = require('gulp-babel');
+
+function babel5() {
+    return src('src/js/*.js')
+        .pipe(babel({
+            presets: ['@babel/env']
+        }))
+        .pipe(uglify())
+        .pipe(dest('dist/js'));
+}
+
+
+exports.jsbabel = babel5
+
+
+
+//清除舊檔案
+const clean = require('gulp-clean');
+
+function clear() {
+  return src('dist' ,{ read: false ,allowEmpty: true })//不去讀檔案結構，增加刪除效率  / allowEmpty : 允許刪除空的檔案
+  .pipe(clean({force: true})); //強制刪除檔案 
+}
+
+//exports.c = clear
+
+
+exports.default = series(parallel(html , sassstyle , minijs , img) ,browser)
+
+exports.online = series(clear, parallel(html , sassstyle , babel5 , min_images))
+
+
+
 
 
 

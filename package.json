@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "1.安裝套件": "npm i",
-    "2.監看": "gulp w",
-    "3.dev": "gulp"
+    "2.開發用": "gulp", 
+    "3.上線用": "gulp online"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,17 @@
     "jquery": "^3.7.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5",
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean": "^0.4.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "sass": "^1.63.4"
