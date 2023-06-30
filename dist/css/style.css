@@ -3,7 +3,9 @@ body {
   font-weight: 400;
   margin: 0;
   padding: 0;
+  background-color: #10f692;
   color: #333;
+  height: 19000px;
 }
 body .wrapper {
   width: 100%;

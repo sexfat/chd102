@@ -101,11 +101,15 @@ exports.allcss = concatcss;
 
 // ==== sass =====
 const sass = require('gulp-sass')(require('sass'));
+const autoprefixer = require('gulp-autoprefixer');
 
 
 function sassstyle() {
     return src('src/sass/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
+        .pipe(autoprefixer({
+            cascade: false
+        }))
         //.pipe(cleanCSS()) 
         .pipe(dest('dist/css'))
 }
@@ -172,6 +176,16 @@ function browser(done) {
 
 
 exports.default = browser;
+
+//以上開發用
+
+
+//以下打包用
+
+
+
+
+
 
 
 

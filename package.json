@@ -4,7 +4,9 @@
   "description": "https://hackmd.io/iaDWtB3NRzmefW2IQltHJw",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "1.安裝套件": "npm i",
+    "2.監看": "gulp w",
+    "3.dev": "gulp"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   "devDependencies": {
     "browser-sync": "^2.29.3",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-file-include": "^2.3.0",
