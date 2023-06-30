@@ -49,20 +49,24 @@
    width: 10 + 20px;
    height: 100px - 1px;
    max-width: 100px * 10;
-  // font:  (100 / 20) + px ; 
+   // font:  (100 / 20) + px ; 
 }
 
 // 判斷式
 $font : thin;
 
 .if {
-  @if $font == 'bold' {
+   @if $font=='bold' {
       font-weight: 900;
-  }@else if $font == 'medium'  {
+   }
+
+   @else if $font=='medium' {
       font-weight: 400;
-  }@else if $font == 'thin' {
+   }
+
+   @else if $font=='thin' {
       font-weight: 100;
-  }
+   }
 }
 
 // .text {
@@ -71,17 +75,47 @@ $font : thin;
 // }
 
 
+// each
+//$img : ad1 ad2 ad3 about product; // list 
+
+
+$title : (
+ //key : value,
+  h1 : 45,
+  h2 : 40,
+  h3 : 36,
+  h4 : 30,
+  h5 : 24,
+);  // map 
+
+
+$bgColor : (
+   Primary : #58f9ff,
+   secondary : #333,
+   error : rgb(250, 56, 26),
+   success : #9aff91 ,
+   warning : #f4ed6a
+);
+
+@each $k , $v in $bgColor {
+    .#{$k} {
+       background-color: $v;
+    }
+}
 
 
 
+@mixin title($title){
+   @each $k , $v in $title {
+      #{$k} {
+         font-size: $v + px;
+         color : #333;
+         font-weight: 100;
+      }
+    }
+}
 
-
-
-
-
-
-
-
+@include title($title)
 
 
 

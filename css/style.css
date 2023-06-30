@@ -383,4 +383,54 @@ body h1 {
   font-weight: 100;
 }
 
+.Primary {
+  background-color: #58f9ff;
+}
+
+.secondary {
+  background-color: #333;
+}
+
+.error {
+  background-color: rgb(250, 56, 26);
+}
+
+.success {
+  background-color: #9aff91;
+}
+
+.warning {
+  background-color: #f4ed6a;
+}
+
+h1 {
+  font-size: 45px;
+  color: #333;
+  font-weight: 100;
+}
+
+h2 {
+  font-size: 40px;
+  color: #333;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 100;
+}
+
+h4 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 100;
+}
+
+h5 {
+  font-size: 24px;
+  color: #333;
+  font-weight: 100;
+}
+
 /*# sourceMappingURL=style.css.map */

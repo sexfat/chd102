@@ -106,6 +106,16 @@
     }
 }
 
+@mixin bgimage($img) {
+    @each $i in $img {
+       .bg-slider-#{$i} {
+          background-image: url('images/#{$i}.jpg');
+          background-size: cover;
+          width: 100%;
+       }
+    }
+ }
+
 
 
 
