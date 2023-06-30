@@ -106,6 +106,8 @@
     }
 }
 
+//背景圖片
+
 @mixin bgimage($img) {
     @each $i in $img {
        .bg-slider-#{$i} {
@@ -116,6 +118,25 @@
     }
  }
 
+
+//標題文字
+ @mixin title($title){
+    @each $k , $v in $title {
+       #{$k} {
+          font-size: $v + px;
+       }
+     }
+ }
+
+
+ //顏色
+ @each $k , $v in $bgColor {
+    .#{$k} {
+       background-color: $v;
+    }
+}
+
+ 
 
 
 

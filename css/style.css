@@ -42,6 +42,26 @@
   font-size: 60px;
 }
 
+.Primary {
+  background-color: #58f9ff;
+}
+
+.secondary {
+  background-color: #333;
+}
+
+.error {
+  background-color: rgb(250, 56, 26);
+}
+
+.success {
+  background-color: #9aff91;
+}
+
+.warning {
+  background-color: #f4ed6a;
+}
+
 .btn {
   padding: 8px 20px;
   text-align: center;
@@ -263,6 +283,22 @@
   }
 }
 /* --------------------------------------- */
+.banner .bg-slider-ads1 {
+  background-image: url("images/ads1.jpg");
+  background-size: cover;
+  width: 100%;
+}
+.banner .bg-slider-ads2 {
+  background-image: url("images/ads2.jpg");
+  background-size: cover;
+  width: 100%;
+}
+.banner .bg-slider-bg {
+  background-image: url("images/bg.jpg");
+  background-size: cover;
+  width: 100%;
+}
+
 header {
   margin: 0px 10px;
   height: 120px;
@@ -311,7 +347,6 @@ h1 {
 body {
   margin: 10px 20px;
   color: #333;
-  font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #ae91fe;
 }
@@ -383,54 +418,36 @@ body h1 {
   font-weight: 100;
 }
 
-.Primary {
-  background-color: #58f9ff;
+body {
+  font-size: 16pxpx;
 }
 
-.secondary {
-  background-color: #333;
-}
-
-.error {
-  background-color: rgb(250, 56, 26);
-}
-
-.success {
-  background-color: #9aff91;
-}
-
-.warning {
-  background-color: #f4ed6a;
+span {
+  font-size: 18pxpx;
 }
 
 h1 {
   font-size: 45px;
-  color: #333;
-  font-weight: 100;
 }
 
 h2 {
   font-size: 40px;
-  color: #333;
-  font-weight: 100;
 }
 
 h3 {
   font-size: 36px;
-  color: #333;
-  font-weight: 100;
 }
 
 h4 {
   font-size: 30px;
-  color: #333;
-  font-weight: 100;
 }
 
 h5 {
   font-size: 24px;
-  color: #333;
-  font-weight: 100;
+}
+
+.box {
+  font-size: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */

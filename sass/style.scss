@@ -14,6 +14,8 @@
 //組件
 @import 'component/btn';
 @import 'component/grid';
+@import 'component/slider';
+@import 'component/form';
 
 // layout
 @import 'layout/cart';
@@ -69,53 +71,18 @@ $font : thin;
    }
 }
 
-// .text {
-//    // color : darken(#fff, 100);
-//    // color : lighten(#000, 100);
-// }
 
-
-// each
-//$img : ad1 ad2 ad3 about product; // list 
-
-
-$title : (
- //key : value,
-  h1 : 45,
-  h2 : 40,
-  h3 : 36,
-  h4 : 30,
-  h5 : 24,
-);  // map 
-
-
-$bgColor : (
-   Primary : #58f9ff,
-   secondary : #333,
-   error : rgb(250, 56, 26),
-   success : #9aff91 ,
-   warning : #f4ed6a
-);
-
-@each $k , $v in $bgColor {
-    .#{$k} {
-       background-color: $v;
-    }
-}
-
-
-
-@mixin title($title){
-   @each $k , $v in $title {
-      #{$k} {
-         font-size: $v + px;
-         color : #333;
-         font-weight: 100;
-      }
-    }
-}
-
+//文字大小使用
 @include title($title)
+
+
+
+
+
+
+
+
+
 
 
 
