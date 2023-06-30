@@ -51,6 +51,89 @@
     }
 }
 
+//LOOP
+
+@for $i from 1 through 6 {
+    .title_h#{$i} {
+        font-size: $i * 10px;
+    } 
+   
+} 
+
+
+// space 
+
+@mixin push($num , $dir){
+    @for $i from 1 through $num{
+        .#{$dir}-#{$i} {
+            position: relative;
+            #{$dir}: $i + px;
+        } 
+    }
+}
+
+
+@mixin grid($num , $breakpoint:null){
+    @for $i from 1 through $num {
+        @if $breakpoint == null {
+        .col-#{$i} {
+         width: ($i / 12) * 100%;
+          }
+        }
+        @else {
+         .col-#{$breakpoint}-#{$i} {
+            width: ($i / 12) * 100%;
+         }
+        }
+    }
+}
+
+
+  @mixin grid($num , $breakpoint:null){
+    @for $i from 1 through $num {
+        @if $breakpoint == null {
+      .col-#{$i} {
+         width: ($i / 12) * 100%;
+      }
+        }
+        @else {
+         .col-#{$breakpoint}-#{$i} {
+            width: ($i / 12) * 100%;
+         }
+        }
+    }
+}
+
+
+
+@include m(){
+    @include grid(12, md)
+}
+
+@include t(){
+    @include grid(12, xl)
+}
+
+
+
+
+
+// @include push(100 , top);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
