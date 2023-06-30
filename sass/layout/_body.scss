@@ -44,27 +44,15 @@ body {
   // }
  }
 
+.h100 {
+  height: 100px;
+}
 
+.left {
+   background-color: #ff9f9f;
+}
 
+.right {
 
- .container {
-   padding-top: 100px;
-
-   section {
-      @include layout(1920){
-       height: 400px
-
-      };
-      background-color: #fea3a3;
-   }
-
-
-
- }
-
- @include m(){
- 
-
-
-
- }
+  background-color: #bcfffe;
+}

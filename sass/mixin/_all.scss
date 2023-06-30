@@ -93,26 +93,20 @@
     @for $i from 1 through $num {
         @if $breakpoint == null {
       .col-#{$i} {
-         width: ($i / 12) * 100%;
+         width: ($i / $num) * 100%;
+         background-color: $colbg;
       }
         }
         @else {
          .col-#{$breakpoint}-#{$i} {
-            width: ($i / 12) * 100%;
+            width: ($i / $num) * 100%;
+            background-color: $colbg;
          }
         }
     }
 }
 
 
-
-@include m(){
-    @include grid(12, md)
-}
-
-@include t(){
-    @include grid(12, xl)
-}
 
 
 
